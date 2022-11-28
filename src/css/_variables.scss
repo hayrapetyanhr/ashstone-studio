@@ -1,0 +1,30 @@
+$black: #000000;
+$gray-1: #969696;
+$gray-3: #929292;
+$gray-2: #9b9b9b;
+$gray-5: #d7d7d7;
+$gray-4: #e9e9e9;
+$white: #ffffff;
+$red: #eb0028;
+$transparent: transparent;
+
+$all-colors: (
+  'black': $black,
+  'gray-1': $gray-1,
+  'gray-2': $gray-2,
+  'gray-3': $gray-3,
+  'gray-4': $gray-4,
+  'gray-5': $gray-5,
+  'white': $white,
+  'red': $red,
+  'transparent': $transparent,
+);
+
+@each $color, $value in $all-colors {
+  .color-#{$color} {
+    color: $value;
+  }
+  .bg-#{$color} {
+    background-color: $value;
+  }
+}
